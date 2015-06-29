@@ -441,6 +441,298 @@ namespace OrleansExample.Interfaces.Advanced
         }
     }
 }
+namespace OrleansExample.Interfaces
+{
+    using System;
+    using System.Net;
+    using System.Runtime.Serialization;
+    using System.Runtime.Serialization.Formatters.Binary;
+    using System.IO;
+    using System.Collections.Generic;
+    using Orleans;
+    using Orleans.Runtime;
+    
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.8.0")]
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute()]
+    public class CustomerIndexerOptimizerFactory
+    {
+        
+
+                        public static OrleansExample.Interfaces.ICustomerIndexerOptimizer GetGrain(long primaryKey)
+                        {
+                            return Cast(global::Orleans.CodeGeneration.GrainFactoryBase.MakeGrainReferenceInternal(typeof(OrleansExample.Interfaces.ICustomerIndexerOptimizer), 1677303408, primaryKey));
+                        }
+
+                        public static OrleansExample.Interfaces.ICustomerIndexerOptimizer GetGrain(long primaryKey, string grainClassNamePrefix)
+                        {
+                            return Cast(global::Orleans.CodeGeneration.GrainFactoryBase.MakeGrainReferenceInternal(typeof(OrleansExample.Interfaces.ICustomerIndexerOptimizer), 1677303408, primaryKey, grainClassNamePrefix));
+                        }
+
+            public static OrleansExample.Interfaces.ICustomerIndexerOptimizer Cast(global::Orleans.Runtime.IAddressable grainRef)
+            {
+                
+                return CustomerIndexerOptimizerReference.Cast(grainRef);
+            }
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.8.0")]
+        [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute()]
+        [System.SerializableAttribute()]
+        [global::Orleans.CodeGeneration.GrainReferenceAttribute("OrleansExample.Interfaces.OrleansExample.Interfaces.ICustomerIndexerOptimizer")]
+        internal class CustomerIndexerOptimizerReference : global::Orleans.Runtime.GrainReference, global::Orleans.Runtime.IAddressable, OrleansExample.Interfaces.ICustomerIndexerOptimizer
+        {
+            
+
+            public static OrleansExample.Interfaces.ICustomerIndexerOptimizer Cast(global::Orleans.Runtime.IAddressable grainRef)
+            {
+                
+                return (OrleansExample.Interfaces.ICustomerIndexerOptimizer) global::Orleans.Runtime.GrainReference.CastInternal(typeof(OrleansExample.Interfaces.ICustomerIndexerOptimizer), (global::Orleans.Runtime.GrainReference gr) => { return new CustomerIndexerOptimizerReference(gr);}, grainRef, 1677303408);
+            }
+            
+            protected internal CustomerIndexerOptimizerReference(global::Orleans.Runtime.GrainReference reference) : 
+                    base(reference)
+            {
+            }
+            
+            protected internal CustomerIndexerOptimizerReference(SerializationInfo info, StreamingContext context) : 
+                    base(info, context)
+            {
+            }
+            
+            protected override int InterfaceId
+            {
+                get
+                {
+                    return 1677303408;
+                }
+            }
+            
+            public override string InterfaceName
+            {
+                get
+                {
+                    return "OrleansExample.Interfaces.OrleansExample.Interfaces.ICustomerIndexerOptimizer";
+                }
+            }
+            
+            [global::Orleans.CodeGeneration.CopierMethodAttribute()]
+            public static object _Copier(object original)
+            {
+                CustomerIndexerOptimizerReference input = ((CustomerIndexerOptimizerReference)(original));
+                return ((CustomerIndexerOptimizerReference)(global::Orleans.Runtime.GrainReference.CopyGrainReference(input)));
+            }
+            
+            [global::Orleans.CodeGeneration.SerializerMethodAttribute()]
+            public static void _Serializer(object original, global::Orleans.Serialization.BinaryTokenStreamWriter stream, System.Type expected)
+            {
+                CustomerIndexerOptimizerReference input = ((CustomerIndexerOptimizerReference)(original));
+                global::Orleans.Runtime.GrainReference.SerializeGrainReference(input, stream, expected);
+            }
+            
+            [global::Orleans.CodeGeneration.DeserializerMethodAttribute()]
+            public static object _Deserializer(System.Type expected, global::Orleans.Serialization.BinaryTokenStreamReader stream)
+            {
+                return CustomerIndexerOptimizerReference.Cast(((global::Orleans.Runtime.GrainReference)(global::Orleans.Runtime.GrainReference.DeserializeGrainReference(expected, stream))));
+            }
+            
+            public override bool IsCompatible(int interfaceId)
+            {
+                return (((interfaceId == this.InterfaceId) 
+                            || (interfaceId == 1928988877)) 
+                            || (interfaceId == -831689659));
+            }
+            
+            protected override string GetMethodName(int interfaceId, int methodId)
+            {
+                return CustomerIndexerOptimizerMethodInvoker.GetMethodName(interfaceId, methodId);
+            }
+            
+            System.Threading.Tasks.Task OrleansExample.Interfaces.ICustomerIndexerOptimizer.Run()
+            {
+
+                return base.InvokeMethodAsync<object>(1975541297, null );
+            }
+            
+            System.Threading.Tasks.Task OrleansExample.Interfaces.ICustomerIndexerOptimizer.Stop()
+            {
+
+                return base.InvokeMethodAsync<object>(-1505116304, null );
+            }
+            
+            System.Threading.Tasks.Task Orleans.IRemindable.ReceiveReminder(string @reminderName, Orleans.Runtime.TickStatus @status)
+            {
+
+                return base.InvokeMethodAsync<object>(-1573596583, new object[] {@reminderName, @status} );
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.8.0")]
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute()]
+    [global::Orleans.CodeGeneration.MethodInvokerAttribute("OrleansExample.Interfaces.OrleansExample.Interfaces.ICustomerIndexerOptimizer", 1677303408)]
+    internal class CustomerIndexerOptimizerMethodInvoker : global::Orleans.CodeGeneration.IGrainMethodInvoker
+    {
+        
+        int global::Orleans.CodeGeneration.IGrainMethodInvoker.InterfaceId
+        {
+            get
+            {
+                return 1677303408;
+            }
+        }
+        
+        global::System.Threading.Tasks.Task<object> global::Orleans.CodeGeneration.IGrainMethodInvoker.Invoke(global::Orleans.Runtime.IAddressable grain, int interfaceId, int methodId, object[] arguments)
+        {
+
+            try
+            {                    if (grain == null) throw new System.ArgumentNullException("grain");
+                switch (interfaceId)
+                {
+                    case 1677303408:  // ICustomerIndexerOptimizer
+                        switch (methodId)
+                        {
+                            case 1975541297: 
+                                return ((ICustomerIndexerOptimizer)grain).Run().ContinueWith(t => {if (t.Status == System.Threading.Tasks.TaskStatus.Faulted) throw t.Exception; return (object)null; });
+                            case -1505116304: 
+                                return ((ICustomerIndexerOptimizer)grain).Stop().ContinueWith(t => {if (t.Status == System.Threading.Tasks.TaskStatus.Faulted) throw t.Exception; return (object)null; });
+                            case -1573596583: 
+                                return ((ICustomerIndexerOptimizer)grain).ReceiveReminder((String)arguments[0], (TickStatus)arguments[1]).ContinueWith(t => {if (t.Status == System.Threading.Tasks.TaskStatus.Faulted) throw t.Exception; return (object)null; });
+                            default: 
+                            throw new NotImplementedException("interfaceId="+interfaceId+",methodId="+methodId);
+                        }case 1928988877:  // IGrainWithIntegerKey
+                        switch (methodId)
+                        {
+                            default: 
+                            throw new NotImplementedException("interfaceId="+interfaceId+",methodId="+methodId);
+                        }case -831689659:  // IRemindable
+                        switch (methodId)
+                        {
+                            case -1573596583: 
+                                return ((IRemindable)grain).ReceiveReminder((String)arguments[0], (TickStatus)arguments[1]).ContinueWith(t => {if (t.Status == System.Threading.Tasks.TaskStatus.Faulted) throw t.Exception; return (object)null; });
+                            default: 
+                            throw new NotImplementedException("interfaceId="+interfaceId+",methodId="+methodId);
+                        }
+                    default:
+                        throw new System.InvalidCastException("interfaceId="+interfaceId);
+                }
+            }
+            catch(Exception ex)
+            {
+                var t = new System.Threading.Tasks.TaskCompletionSource<object>();
+                t.SetException(ex);
+                return t.Task;
+            }
+        }
+        
+        public static string GetMethodName(int interfaceId, int methodId)
+        {
+
+            switch (interfaceId)
+            {
+                
+                case 1677303408:  // ICustomerIndexerOptimizer
+                    switch (methodId)
+                    {
+                        case 1975541297:
+                            return "Run";
+                    case -1505116304:
+                            return "Stop";
+                    case -1573596583:
+                            return "ReceiveReminder";
+                    
+                        default: 
+                            throw new NotImplementedException("interfaceId="+interfaceId+",methodId="+methodId);
+                    }
+                case 1928988877:  // IGrainWithIntegerKey
+                    switch (methodId)
+                    {
+                        
+                        default: 
+                            throw new NotImplementedException("interfaceId="+interfaceId+",methodId="+methodId);
+                    }
+                case -831689659:  // IRemindable
+                    switch (methodId)
+                    {
+                        case -1573596583:
+                            return "ReceiveReminder";
+                    
+                        default: 
+                            throw new NotImplementedException("interfaceId="+interfaceId+",methodId="+methodId);
+                    }
+
+                default:
+                    throw new System.InvalidCastException("interfaceId="+interfaceId);
+            }
+        }
+    }
+}
+namespace OrleansExample.InterfacesSerializers
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Reflection;
+    using Orleans.Serialization;
+    using Orleans.Runtime;
+    using System.Runtime.Serialization;
+    using System.Collections;
+    using System.Runtime.InteropServices;
+    
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Orleans-CodeGenerator", "1.0.8.0")]
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute()]
+    [global::Orleans.CodeGeneration.RegisterSerializerAttribute()]
+    internal class Orleans_Runtime_TickStatusSerialization
+    {
+        
+        private static System.Reflection.FieldInfo fieldInfo1;
+        
+        private static System.Reflection.FieldInfo fieldInfo2;
+        
+        private static System.Reflection.FieldInfo fieldInfo3;
+        
+        static Orleans_Runtime_TickStatusSerialization()
+        {
+            Register();
+        }
+        
+        public static object DeepCopier(object original)
+        {
+            return original;
+        }
+        
+        public static void Serializer(object untypedInput, Orleans.Serialization.BinaryTokenStreamWriter stream, System.Type expected)
+        {
+            Orleans.Runtime.TickStatus input = ((Orleans.Runtime.TickStatus)(untypedInput));
+            Orleans.Serialization.SerializationManager.SerializeInner(input.CurrentTickTime, stream, typeof(System.DateTime));
+            Orleans.Serialization.SerializationManager.SerializeInner(input.FirstTickTime, stream, typeof(System.DateTime));
+            Orleans.Serialization.SerializationManager.SerializeInner(input.Period, stream, typeof(System.TimeSpan));
+        }
+        
+        public static object Deserializer(System.Type expected, global::Orleans.Serialization.BinaryTokenStreamReader stream)
+        {
+            Orleans.Runtime.TickStatus result = default(Orleans.Runtime.TickStatus);
+            object objResult = ((object)(result));
+            object temp1 = ((System.DateTime)(Orleans.Serialization.SerializationManager.DeserializeInner(typeof(System.DateTime), stream)));
+            fieldInfo1.SetValue(objResult, temp1);
+            object temp2 = ((System.DateTime)(Orleans.Serialization.SerializationManager.DeserializeInner(typeof(System.DateTime), stream)));
+            fieldInfo2.SetValue(objResult, temp2);
+            object temp3 = ((System.TimeSpan)(Orleans.Serialization.SerializationManager.DeserializeInner(typeof(System.TimeSpan), stream)));
+            fieldInfo3.SetValue(objResult, temp3);
+            return objResult;
+        }
+        
+        public static void Register()
+        {
+            global::Orleans.Serialization.SerializationManager.Register(typeof(Orleans.Runtime.TickStatus), DeepCopier, Serializer, Deserializer);
+            fieldInfo1 = typeof(Orleans.Runtime.TickStatus).GetField("<CurrentTickTime>k__BackingField", (System.Reflection.BindingFlags.Instance 
+                            | (System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic)));
+            fieldInfo2 = typeof(Orleans.Runtime.TickStatus).GetField("<FirstTickTime>k__BackingField", (System.Reflection.BindingFlags.Instance 
+                            | (System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic)));
+            fieldInfo3 = typeof(Orleans.Runtime.TickStatus).GetField("<Period>k__BackingField", (System.Reflection.BindingFlags.Instance 
+                            | (System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic)));
+        }
+    }
+}
 #pragma warning restore 162
 #pragma warning restore 219
 #pragma warning restore 414

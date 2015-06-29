@@ -89,6 +89,15 @@ namespace OrleansExample.Grains.Advanced
         }
     }
 }
+namespace OrleansExample.Grains
+{
+    using Orleans.CodeGeneration;
+    using Orleans;
+    using System;
+    using System.Runtime.InteropServices;
+    using System.Runtime.Serialization;
+    
+}
 #pragma warning restore 162
 #pragma warning restore 219
 #pragma warning restore 414
